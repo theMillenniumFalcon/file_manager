@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native'
 
-import { useAppSelector } from '../hooks/reduxHooks'
+import { useAppSelector } from '../hooks/useAppSelector'
 
 export default function Main() {
     const { theme } = useAppSelector((state: { theme: any }) => state.theme)
