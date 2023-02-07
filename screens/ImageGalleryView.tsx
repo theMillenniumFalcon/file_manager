@@ -5,7 +5,7 @@ import { StackScreenProps } from '@react-navigation/stack'
 import { useAppSelector } from '../hooks/useAppSelector'
 
 type FileViewParamList = {
-    ImageGalleryView: { prevDir: string; folderName: string };
+    ImageGalleryView: { prevDir: string; folderName: string }
 }
 
 type Props = StackScreenProps<FileViewParamList, 'ImageGalleryView'>
