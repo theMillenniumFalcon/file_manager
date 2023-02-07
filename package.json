@@ -4,22 +4,28 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
+    "dev": "expo start --tunnel --clear",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
   "dependencies": {
-    "expo": "~47.0.12",
+    "@reduxjs/toolkit": "^1.9.2",
+    "expo": "^47.0.13",
+    "expo-file-system": "^15.1.1",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
-    "react-native-web": "~0.18.9"
+    "react-native-gesture-handler": "^2.9.0",
+    "react-native-web": "~0.18.9",
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.70.6",
+    "@types/react-redux": "^7.1.25",
     "typescript": "^4.6.3"
   },
   "private": true
