@@ -5,7 +5,11 @@ export const { width: SIZE, height: HEIGHT } = Dimensions.get('window')
 export const reExt = new RegExp(/(?:\.([^.]+))?$/)
 export const base64reg = /data:image\/[^]+base64,/
 
-export const fileIcons = {
+export type fileIconsObjectType = {
+
+}
+
+export const fileIcons: fileIconsObjectType = {
     json: 'code-json',
     pdf: 'file-pdf-box',
     msword: 'file-word-outline',
