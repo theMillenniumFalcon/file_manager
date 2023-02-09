@@ -47,7 +47,7 @@
     "react-native-simple-dialogs": "^1.5.0",
     "react-native-svg": "13.4.0",
     "react-native-web": "~0.18.9",
-    "react-native-webview": "^11.26.1",
+    "react-native-webview": "11.23.1",
     "react-redux": "^8.0.5",
     "socket.io-client": "^4.6.0"
   },
