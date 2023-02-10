@@ -5,6 +5,7 @@ import Constants from 'expo-constants'
 
 import { useAppSelector } from '../hooks/useAppSelector'
 import { StackScreenProps } from '@react-navigation/stack'
+import { PDFViewer } from '../components/MiscFileView/PDFViewer'
 
 type MiscFileViewParamList = {
     MiscFileView: { prevDir: string; folderName: string }
@@ -14,6 +15,11 @@ type Props = StackScreenProps<MiscFileViewParamList, 'MiscFileView'>
 
 const MiscFileView = ({ route }: Props) => {
     const { colors } = useAppSelector((state) => state.theme.theme)
+    const { prevDir, folderName } = route.params
+    const fileExt = folderName.split('/').pop()!.split('.').pop()!.toLowerCase()
+
+    if (fileExt === 'pdf')
+        return <PDFViewer fileURI={prevDir + '/' + folderName} />
 
     return (
         <View style={{ ...styles.container, backgroundColor: colors.background }}>
@@ -24,6 +30,8 @@ const MiscFileView = ({ route }: Props) => {
     )
 }
 
+export default MiscFileView
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -32,5 +40,3 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 })
-
-export default MiscFileView
