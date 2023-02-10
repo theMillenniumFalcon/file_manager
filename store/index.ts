@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
+
 import imagesSlice from '../features/files/imagesSlice'
 import snackbarSlice from '../features/files/snackbarSlice'
 import tabbarStyleSlice from '../features/files/tabbarStyleSlice'
