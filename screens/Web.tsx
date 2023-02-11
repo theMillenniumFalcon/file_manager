@@ -37,7 +37,9 @@ const Web: React.FC = () => {
 
     const upgradeURL = (uri: string, searchEngine = 'google') => {
         const isURL = uri.split(' ').length === 1 && uri.includes('.')
-        type searchEnginesObjectType = {}
+        type searchEnginesObjectType = {
+            google: (uri: string) => string
+        }
         if (isURL) {
             if (!uri.startsWith('http')) {
                 return 'https://' + uri
